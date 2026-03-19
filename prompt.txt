@@ -1,0 +1,44 @@
+"""Please analyze the following enterprise data samples to identify business roles and domains, then design corresponding professional tasks.
+
+Data Samples:
+{sample_context}
+
+Business Role Analysis Requirements:
+1. Analyze the business domain, industry characteristics, and enterprise type in the data samples
+2. Identify primary business roles (e.g., Financial Analyst, Auditor, Risk Manager, Compliance Officer, Operations Manager, Technical Director, Accountant, Tax Specialist, etc.)
+3. Determine the responsibilities and focus areas of each role within the enterprise
+4. Design corresponding professional tasks based on role characteristics (not limited to assessment, could be bookkeeping, verification, analysis, reporting, etc.)
+
+Reference Example (Risk Assessment Role):
+Task: Conduct comprehensive enterprise risk assessment
+Output Format: {{"critical_findings": {{"urgent_issues": []}}, "category_analysis": {{"categories": [{{"risk_type": "", "severity": "", "impact": "", "explanation": "detailed explanation of this risk category, including important values, names, and personnel if present"}}]}}, "cross_category_insights": {{"patterns": [], "themes": []}}, "recommendations": {{"action_items": []}}, "risk_assessment": {{"high_priority": [], "medium_term": [], "long_term": []}}, "summary": {{"key_points": []}}, "action_plan": {{"immediate_actions": [], "long_term_strategies": []}}}}
+
+Important Rules for Output Format Design:
+1. ALWAYS include "category_analysis" field in the output format
+2. Each category MUST include detailed "explanation" field
+3. In the explanation field, ALWAYS highlight and explain important numerical values, names, personnel, and key information if present in the data
+4. Adapt the "category_analysis" structure based on the role and task context:
+   - For Risk Assessment: {{"categories": [{{"risk_type": "", "severity": "", "impact": "", "areas_for_improvement": "", "explanation": "detailed explanation of this risk category, including important values, names, and personnel if present"}}]}}
+   - For Financial Analysis: {{"categories": [{{"account_type": "", "balance": "", "trend": "", "explanation": "detailed explanation of this financial category, including important amounts, account names, and responsible personnel if present"}}]}}
+   - For Audit Verification: {{"categories": [{{"audit_area": "", "compliance_status": "", "findings": "", "explanation": "detailed explanation of this audit category, including important findings, personnel names, and compliance values if present"}}]}}
+   - For Bookkeeping: {{"categories": [{{"account_code": "", "transaction_type": "", "amount": "", "explanation": "detailed explanation of this accounting category, including important amounts, account codes, and transaction details if present"}}]}}
+   - For Compliance Check: {{"categories": [{{"regulation_type": "", "compliance_level": "", "violations": "", "explanation": "detailed explanation of this compliance category, including important compliance values, regulation names, and responsible parties if present"}}]}}
+5. Include AT LEAST 3 parallel fields alongside "category_analysis" (e.g., "critical_findings", "recommendations", "action_items", "summary", "insights", etc.)
+6. Ensure the category_analysis structure aligns with the professional domain and task requirements
+7. Maintain consistency with other output fields based on the role context
+
+Please design based on the analysis results for the identified business role:
+1. Role description and responsibilities
+2. Professional task description (based on role characteristics, could be assessment, analysis, verification, bookkeeping, reporting, etc.)
+3. Suitable output format for this role (JSON structure) - MUST include category_analysis with appropriate structure
+4. Professional rules and guidelines
+
+Please return in JSON format:
+{{
+    "business_role": "identified business role",
+    "role_description": "role description and responsibilities",
+    "professional_task": "professional task description (e.g., risk assessment, financial analysis, audit verification, bookkeeping processing, etc.)",
+    "output_format": "suitable JSON output format for this role",
+    "professional_rules": ["list of professional rules"],
+    "usage_instructions": ["list of usage instructions"]
+}}"""
